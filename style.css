@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Prompt", sans-serif;
+}
+
+:root {
+  --letter-bg-color: #105038;
+  --body-bg-color: #1a1b1e;
+  --font-color: #ffffff;
+  --glow-color: hsl(186 100% 69%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--body-bg-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-fields input {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-style: none;
+  outline: none;
+  padding: 0.25em 0.5em;
+  border: 0.25em solid transparent;
+  background-image: linear-gradient(#000, #000),
+    linear-gradient(
+      120deg,
+      rgb(46, 116, 100) 0%,
+      rgb(13, 46, 46) 50%,
+      rgb(68, 109, 6) 100%
+    );
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 1.8em;
+}
+
+@media screen and (min-width: 600px) {
+  .input-fields {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .input-fields input {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    border-style: none;
+    outline: none;
+    height: calc(1em + 1.6em + 0.5em);
+    width: 100%;
+    padding: 0.25em 0.75em;
+    border: 0.25em solid transparent;
+    background-image: linear-gradient(#000, #000),
+      linear-gradient(
+        120deg,
+        rgb(46, 116, 100) 0%,
+        rgb(13, 46, 46) 50%,
+        rgb(68, 109, 6) 100%
+      );
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 1.8em;
+    background-size: 200% 100%;
+  }
+}
+
+.button {
+  background-color: var(--letter-bg-color);
+  color: var(--font-color);
+  border-radius: 1.8em;
+  border: 0.25em solid transparent;
+  padding: 0.25em 0.75em;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: letter-spacing 0.2s;
+}
+
+.breakified-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.breakified-label {
+  font-size: 4.25rem;
+  color: var(--font-color);
+}
+
+.breakified-label span:nth-child(2) {
+  background-color: var(--letter-bg-color);
+  color: var(--font-color);
+}
+
+@media screen and (min-width: 600px) {
+  .breakified-label {
+    font-size: 5.25rem;
+  }
+  .button:hover {
+    letter-spacing: 2em;
+  }
+}
